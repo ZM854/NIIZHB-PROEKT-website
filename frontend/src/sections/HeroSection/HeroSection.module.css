@@ -1,0 +1,48 @@
+.hero__section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__burger {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.hero__social {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+
+.hero__social svg {
+  width: 64px;
+  height: 64px;
+  color: var(--accent-blue);
+}
+
+.hero__credit {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.logo__red {
+  color: var(--accent-red);
+}
+
+.logo__blue {
+  color: var(--accent-blue);
+}

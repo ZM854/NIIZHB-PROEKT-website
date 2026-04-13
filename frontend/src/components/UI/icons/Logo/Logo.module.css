@@ -1,0 +1,13 @@
+.logo__container {
+    font-size: 32px;
+    font-family: var(--arial);
+    font-weight: 700;
+}
+
+.logo__red {
+    color: var(--accent-red);
+}
+
+.logo__blue {
+    color: var(--accent-blue);
+}

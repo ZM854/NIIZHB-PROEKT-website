@@ -1,0 +1,18 @@
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.contact__tel,
+.contact__email {
+  color: var(--accent-blue);
+  text-align: center;
+  font-weight: 500;
+}
+
+.contact__tel {
+  font-weight: 24px;
+}

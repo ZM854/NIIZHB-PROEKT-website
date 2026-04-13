@@ -1,0 +1,10 @@
+.menu__wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.menu__item {
+    padding: 12px 8px;
+    font-size: 16px;
+    font-weight: 500;
+}

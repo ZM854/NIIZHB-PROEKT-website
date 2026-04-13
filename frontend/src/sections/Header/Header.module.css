@@ -1,0 +1,8 @@
+.header {
+  position: sticky;
+  padding: 16px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
