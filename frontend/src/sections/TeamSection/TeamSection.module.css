@@ -1,24 +1,27 @@
 .team__container {
-  padding: 80px 120px;
+  padding: 80px 20px;
   display: flex;
   flex-direction: column;
   gap: 32px;
   align-items: center;
 }
 
-.team__red {
-  color: var(--accent-red);
-}
-
-.team__blue {
-  color: var(--accent-blue);
+.team__title {
+  text-align: center;
 }
 
 .team__content {
+  max-width: 1200px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+}
+
+@media (max-width: 48rem) {
+  .team__content {
+    row-gap: 32px;
+  }
 }

@@ -3,6 +3,7 @@
 :root {
   --bg: #fff;
   --bd-alt: #ebecf0;
+  --bg-blur-blue: rgba(1, 111, 190, 0.8);
   --accent-red: #fe0000;
   --accent-blue: #016fbe;
   --accent-blue-pale: #86c4f0;
@@ -13,6 +14,13 @@
   --text-on-accent: #fff;
   --text-secondary: #6b7280;
 
+  --base-font-size: 18px;
+
+  --fs-h1: 4rem;
+  --fs-h2: 2.6rem;
+  --fs-h3: 1.5rem;
+  --fs-body: 1.125rem;
+
   --arial: Arial, Helvetica, sans-serif;
   --roboto: "Roboto", Helvetica, sans-serif;
   color-scheme: light dark;
@@ -20,6 +28,23 @@
 
 @media (prefers-color-scheme: dark) {
   /* TO DO: implement dark theme */
+}
+
+@media (max-width: 64rem) {
+  :root {
+    --fs-h1: 3.5rem;
+    --fs-h2: 2.2rem;
+    --fs-body: 1rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.8rem;
+    --fs-h3: 1.3rem;
+    --fs-body: 0.95rem;
+  }
 }
 
 * {
@@ -35,9 +60,10 @@ html {
 }
 
 body {
-  font-size: 18px;
+  font-size: var(--fs-body);
   font-family: var(--roboto);
   font-weight: 400;
+  line-height: 1.5;
   color: var(--text);
   background: var(--bg);
 
@@ -93,22 +119,19 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
+  font-family: var(--arial);
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 h1 {
-  font-size: 64px;
-  font-weight: 700;
-  font-family: var(--arial);
+  font-size: var(--fs-h1);
 }
 
 h2 {
-  font-size: 42px;
-  font-weight: 700;
-  font-family: var(--arial);
+  font-size: var(--fs-h2);
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 700;
-  font-family: var(--arial);
+  font-size: var(--fs-h3);
 }
