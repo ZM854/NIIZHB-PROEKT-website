@@ -1,3 +1,4 @@
+import BurgerIcon from "../../icons/BurgerMenuIcon/BurgerMenuIcon";
 import cls from "./BurgerButton.module.css";
 
 type BurgerButtonProps = {
@@ -7,14 +8,7 @@ type BurgerButtonProps = {
 const BurgerButton = ({ onClick }: BurgerButtonProps) => {
   return (
     <button className={cls.burger} onClick={onClick}>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 -960 960 960"
-        fill="currentColor"
-      >
-        <path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
-      </svg>
+      <BurgerIcon size={64} />
     </button>
   );
 };

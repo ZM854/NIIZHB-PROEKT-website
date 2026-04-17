@@ -1,13 +1,20 @@
 .logo__container {
-    font-size: 32px;
-    font-family: var(--arial);
-    font-weight: 700;
+  font-size: 32px;
+  font-family: var(--arial);
+  font-weight: 700;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  cursor: default;
 }
 
 .logo__red {
-    color: var(--accent-red);
+  color: var(--accent-red);
 }
 
 .logo__blue {
-    color: var(--accent-blue);
+  color: var(--accent-blue);
 }

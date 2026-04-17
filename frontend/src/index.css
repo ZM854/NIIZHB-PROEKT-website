@@ -106,3 +106,9 @@ h2 {
   font-weight: 700;
   font-family: var(--arial);
 }
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--arial);
+}

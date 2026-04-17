@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ContactInfo from "../ContactInfo/ContactInfo";
 import cls from "./MobileMenu.module.css";
+import CloseIcon from "../UI/icons/CloseIcon/CloseIcon";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -30,13 +31,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             onClick={onClose}
             className={cls.menu__close}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 -960 960 960"
-              fill="currentColor"
-            >
-              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-            </svg>
+            <CloseIcon />
           </button>
           <nav className={cls.menu}>
             <ul className={cls.menu__list}>
