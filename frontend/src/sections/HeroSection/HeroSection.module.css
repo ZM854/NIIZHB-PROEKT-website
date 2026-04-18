@@ -1,7 +1,6 @@
 .hero__section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +24,7 @@
   position: absolute;
   top: 16px;
   right: 16px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hero__social {
@@ -32,6 +32,7 @@
   bottom: 16px;
   left: 16px;
   color: var(--accent-blue);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hero__credit {

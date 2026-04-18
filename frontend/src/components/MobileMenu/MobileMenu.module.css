@@ -32,6 +32,7 @@
 .menu__close {
   align-self: flex-end;
   color: var(--text-secondary);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu__header {

@@ -19,7 +19,14 @@ const ProjectsSection = () => {
     title: string;
     desc: string;
     img: string;
-    variant: "small" | "wide" | "tall" | "big";
+    variant:
+      | "small"
+      | "wide"
+      | "tall"
+      | "big"
+      | "wide"
+      | "wideTabletSmall"
+      | "tallTabletSmall";
   }[] = [
     {
       id: 1,
@@ -75,7 +82,7 @@ const ProjectsSection = () => {
       title: "Фармацевтическое производство",
       desc: "Разработка полного цикла концепции, проектной и рабочей документации, выполнение функций авторского надзора, получение РНС",
       img: pharm,
-      variant: "wide",
+      variant: "wideTabletSmall",
     },
     {
       id: 10,
@@ -110,7 +117,7 @@ const ProjectsSection = () => {
             variant={project.variant}
             isActive={activeId === project.id}
             onToggle={() =>
-              setActiveId(activeId === project.id ? null : project.id)
+              setActiveId((prev) => (prev === project.id ? null : project.id))
             }
             onMouseEnter={() => setActiveId(project.id)}
             onMouseLeave={() => setActiveId(null)}
