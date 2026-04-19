@@ -3,7 +3,7 @@ type CloseIconProps = {
   size?: number;
 };
 
-const CloseIcon = ({ size = 48, className }: CloseIconProps) => {
+const CloseIcon = ({ size = 64, className }: CloseIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

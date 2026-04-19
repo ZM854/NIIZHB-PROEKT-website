@@ -1,4 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/roboto-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* Критически важно для CLS! */
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/roboto-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/roboto-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --bg: #fff;
@@ -20,6 +42,7 @@
   --fs-h2: 2.6rem;
   --fs-h3: 1.5rem;
   --fs-body: 1.125rem;
+  --fs-nav: 1.125rem;
 
   --arial: Arial, Helvetica, sans-serif;
   --roboto: "Roboto", Helvetica, sans-serif;
@@ -55,7 +78,6 @@
 }
 
 html {
-  line-height: 1;
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
 }

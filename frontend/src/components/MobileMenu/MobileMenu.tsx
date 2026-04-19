@@ -17,6 +17,21 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
     }
   }, [isOpen]);
 
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ): void => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+
+    if (!element) return;
+
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <>
       <div
@@ -36,22 +51,50 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <nav className={cls.menu}>
             <ul className={cls.menu__list}>
               <li>
-                <a href="#about" onClick={onClose}>
+                <a
+                  className={cls.menu__item}
+                  href="#about"
+                  onClick={(e) => {
+                    onClose();
+                    scrollToSection(e, "about");
+                  }}
+                >
                   О нас
                 </a>
               </li>
               <li>
-                <a href="#team" onClick={onClose}>
+                <a
+                  className={cls.menu__item}
+                  href="#team"
+                  onClick={(e) => {
+                    onClose();
+                    scrollToSection(e, "team");
+                  }}
+                >
                   Сотрудники
                 </a>
               </li>
               <li>
-                <a href="#projects" onClick={onClose}>
+                <a
+                  className={cls.menu__item}
+                  href="#projects"
+                  onClick={(e) => {
+                    onClose();
+                    scrollToSection(e, "projects");
+                  }}
+                >
                   Проекты
                 </a>
               </li>
               <li>
-                <a href="#contacts" onClick={onClose}>
+                <a
+                  className={cls.menu__item}
+                  href="#contacts"
+                  onClick={(e) => {
+                    onClose();
+                    scrollToSection(e, "contacts");
+                  }}
+                >
                   Контакты
                 </a>
               </li>

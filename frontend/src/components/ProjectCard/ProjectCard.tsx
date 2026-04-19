@@ -41,7 +41,13 @@ const ProjectCard = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <img className={cls.image} src={image} alt={title} loading="lazy" />
+      <img
+        className={cls.image}
+        src={image}
+        alt={title}
+        loading="lazy"
+        fetchPriority="low"
+      />
       <div className={cls.content}>
         <h3>{title}</h3>
         <p>{desc}</p>
