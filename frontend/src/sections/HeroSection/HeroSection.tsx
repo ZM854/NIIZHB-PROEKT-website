@@ -4,6 +4,7 @@ import cls from "./HeroSection.module.css";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import TelegramIcon from "../../components/UI/icons/TelegramIcon/TelegramIcon";
 import BrandText from "../../components/BrandText/BrandText";
+import ThemeToggle from "../../components/UI/buttons/ThemeToggle/ThemeToggle";
 
 const HeroSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,8 @@ const HeroSection = () => {
         <BrandText first="НИИЖБ" second="ПРОЕКТ" />
       </h1>
 
-      <div className={cls.hero__burger}>
+      <div className={cls.hero__controls}>
+        <ThemeToggle />
         <BurgerButton onClick={() => setIsMenuOpen(!isMenuOpen)} />
       </div>
 

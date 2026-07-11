@@ -21,7 +21,9 @@
   cursor: default;
 }
 
-.hero__burger {
+.hero__controls {
+  display: flex;
+  gap: 0.5rem;
   position: absolute;
   top: 16px;
   right: 16px;

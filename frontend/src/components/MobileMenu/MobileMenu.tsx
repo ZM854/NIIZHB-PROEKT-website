@@ -40,7 +40,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       />
 
       <div className={`${cls.menu__overlay} ${isOpen ? cls.menu__open : ""}`}>
-        <div className={cls.menu__header}>
+        <div className={cls.menu__header}>          
           <button
             aria-label="Закрыть"
             onClick={onClose}
