@@ -9,6 +9,7 @@
 
 .project__title {
   text-align: center;
+  color: var(--accent-blue);
 }
 
 .project__grid {

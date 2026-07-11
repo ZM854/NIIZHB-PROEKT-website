@@ -1,4 +1,3 @@
-import BrandText from "../../components/BrandText/BrandText";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import cls from "./ProjectsSection.module.css";
 import moscowSity from "../../assets/img-moscow-sity.webp";
@@ -104,9 +103,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className={cls.projects}>
-      <h2 className={cls.project__title}>
-        <BrandText first="НАШИ " second="ПРОЕКТЫ" />
-      </h2>
+      <h2 className={cls.project__title}>НАШИ ПРОЕКТЫ</h2>
       <div className={cls.project__grid}>
         {projectData.map((project) => (
           <ProjectCard

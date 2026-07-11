@@ -3,14 +3,13 @@ import AboutSection from "./sections/AboutSection/AboutSection";
 import Footer from "./sections/Footer/Footer";
 import HeroSection from "./sections/HeroSection/HeroSection";
 import ProjectsSection from "./sections/ProjectsSection/ProjectsSection";
-import TeamSection from "./sections/TeamSection/TeamSection";
 
 function App() {
   return (
     <>
       <HeroSection />
       <AboutSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <ProjectsSection />
       <Footer />
     </>

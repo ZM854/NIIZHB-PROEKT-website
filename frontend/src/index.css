@@ -3,7 +3,7 @@
   src: url("./assets/fonts/roboto-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap; /* Критически важно для CLS! */
+  font-display: swap;
 }
 
 @font-face {
@@ -50,7 +50,17 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  /* TO DO: implement dark theme */
+  :root {
+    --bg: #12161a;
+    --bd-alt: #21272a;
+
+    --text: #f2f4f8;
+    --text-secondary: #b4acac;
+
+    --bg-blur-blue: rgba(1, 111, 190, 0.4);
+
+    --accent-blue-pale: #1c3d5a;
+  }
 }
 
 @media (max-width: 64rem) {

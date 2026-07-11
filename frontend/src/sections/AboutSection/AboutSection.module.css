@@ -10,5 +10,8 @@
 
 .about__content {
   max-width: 800px;
-  color: var(--text-secondary);
+}
+
+.about__title {
+  color: var(--accent-blue);
 }
