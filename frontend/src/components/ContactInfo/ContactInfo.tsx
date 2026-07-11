@@ -16,6 +16,11 @@ const ContactInfo = () => {
         <h3>Вопросы по проектам</h3>
         <p>2021sk@mail.ru</p>
       </a>
+
+      <div className={cls.adress}>
+        <h3>Адрес</h3>
+        <p>г. Москва, Пресненская наб., 10, стр. 2</p>
+      </div>
     </div>
   );
 };
