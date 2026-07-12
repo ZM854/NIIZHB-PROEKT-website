@@ -9,20 +9,14 @@ import { ThemeContext, type Theme } from "./ThemeContext";
 
 const STORAGE_KEY = "theme";
 
-function applyTheme(theme: Theme) {
-  const root = document.documentElement;
-
-  let resolved: "light" | "dark";
-
-  if (theme === "system") {
-    resolved = window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  } else {
-    resolved = theme;
+function resolveTheme(theme: Theme): "light" | "dark" {
+  if (theme !== "system") {
+    return theme;
   }
 
-  root.dataset.theme = resolved;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
 }
 
 interface Props {
@@ -40,26 +34,32 @@ export function ThemeProvider({ children }: Props) {
     return "system";
   });
 
+  const [, forceUpdate] = useState(0);
+
+  const resolvedTheme = useMemo(() => resolveTheme(theme), [theme]);
+
   const setTheme = useCallback((theme: Theme) => {
     setThemeState(theme);
     localStorage.setItem(STORAGE_KEY, theme);
   }, []);
 
   const toggleTheme = useCallback(() => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  }, [theme, setTheme]);
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  }, [resolvedTheme, setTheme]);
 
   useEffect(() => {
-    applyTheme(theme);
-  }, [theme]);
+    document.documentElement.dataset.theme = resolvedTheme;
+  }, [resolvedTheme]);
 
   useEffect(() => {
+    if (theme !== "system") {
+      return;
+    }
+
     const media = window.matchMedia("(prefers-color-scheme: dark)");
 
     const listener = () => {
-      if (theme === "system") {
-        applyTheme("system");
-      }
+      forceUpdate((value) => value + 1);
     };
 
     media.addEventListener("change", listener);
@@ -70,10 +70,11 @@ export function ThemeProvider({ children }: Props) {
   const value = useMemo(
     () => ({
       theme,
+      resolvedTheme,
       setTheme,
       toggleTheme,
     }),
-    [theme, setTheme, toggleTheme],
+    [theme, resolvedTheme, setTheme, toggleTheme],
   );
 
   return (

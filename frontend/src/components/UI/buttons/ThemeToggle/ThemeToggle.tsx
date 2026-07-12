@@ -4,11 +4,11 @@ import LightThemeIcon from "../../icons/LightThemeIcon/LightThemeIcon";
 import cls from "./ThemeToggle.module.css";
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  const { resolvedTheme, toggleTheme } = useTheme();
 
   return (
     <button className={cls.button} onClick={toggleTheme}>
-      {theme === "dark" ? (
+      {resolvedTheme === "dark" ? (
         <LightThemeIcon size={52} />
       ) : (
         <DarkThemeIcon size={52} />
