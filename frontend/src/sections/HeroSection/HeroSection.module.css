@@ -38,6 +38,12 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.down {
+  position: absolute;
+  bottom: 8px;
+  color: var(--accent-blue);
+}
+
 .hero__credit {
   position: absolute;
   bottom: 20px;
@@ -45,10 +51,11 @@
   font-size: 14px;
   color: var(--text-secondary);
 }
-.logo__red {
-  color: var(--accent-red);
-}
 
-.logo__blue {
-  color: var(--accent-blue);
+@media (max-width: 48em) {
+  .down {
+    position: absolute;
+    bottom: 32px;
+    color: var(--accent-blue);
+  }
 }

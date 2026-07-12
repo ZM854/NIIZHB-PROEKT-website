@@ -2,7 +2,7 @@ import cls from "./ProjectCard.module.css";
 
 type ProjectCardProps = {
   title: string;
-  desc: string;
+  meta: string;
   image: string;
   variant:
     | "small"
@@ -16,22 +16,29 @@ type ProjectCardProps = {
   onToggle: () => void;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
+  onMoreClick: () => void;
 };
 
 const ProjectCard = ({
   title,
-  desc,
+  meta,
   image,
   variant,
   isActive,
   onToggle,
   onMouseEnter,
   onMouseLeave,
+  onMoreClick,
 }: ProjectCardProps) => {
   const handleMouseEnter = () => {
     if (window.matchMedia("(pointer: fine)").matches) {
       onMouseEnter();
     }
+  };
+
+  const handleMoreClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    onMoreClick();
   };
 
   return (
@@ -50,7 +57,18 @@ const ProjectCard = ({
       />
       <div className={cls.content}>
         <h3>{title}</h3>
-        <p>{desc}</p>
+
+        <div className={cls.details}>
+          <p>{meta}</p>
+
+          <button
+            type="button"
+            className={cls.moreButton}
+            onClick={handleMoreClick}
+          >
+            Подробнее
+          </button>
+        </div>
       </div>
     </div>
   );

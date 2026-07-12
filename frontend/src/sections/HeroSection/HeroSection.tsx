@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import BurgerButton from "../../components/UI/buttons/BurgerButton/BurgerButton";
 import cls from "./HeroSection.module.css";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import TelegramIcon from "../../components/UI/icons/TelegramIcon/TelegramIcon";
 import BrandText from "../../components/BrandText/BrandText";
 import ThemeToggle from "../../components/UI/buttons/ThemeToggle/ThemeToggle";
+import DownArrowIcon from "../../components/UI/icons/DownArrowIcon/DownArrowIcon";
+import BurgerIcon from "../../components/UI/icons/BurgerMenuIcon/BurgerMenuIcon";
+import IconButton from "../../components/UI/buttons/IconButton/IconButton";
 
 const HeroSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,11 +35,25 @@ const HeroSection = () => {
 
       <div className={cls.hero__controls}>
         <ThemeToggle />
-        <BurgerButton onClick={() => setIsMenuOpen(!isMenuOpen)} />
+        <IconButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <BurgerIcon size={64} />
+        </IconButton>
       </div>
 
       <div className={cls.hero__social}>
         <TelegramIcon size={64} />
+      </div>
+
+      <div className={cls.down}>
+        <IconButton
+          onClick={() => {
+            window.scrollTo({
+              top: window.innerHeight,
+            });
+          }}
+        >
+          <DownArrowIcon size={64} />
+        </IconButton>
       </div>
 
       <div className={cls.hero__credit}>

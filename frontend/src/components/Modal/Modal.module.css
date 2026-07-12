@@ -1,0 +1,87 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 32px;
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  z-index: 1000;
+
+  animation: backdropFade 0.25s ease;
+}
+
+.modal {
+  width: min(1200px, 100%);
+  max-height: calc(100dvh - 64px);
+
+  overflow: auto;
+
+  border-radius: 32px;
+
+  background: var(--bg);
+  color: var(--text);
+
+  animation: modalAppear 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25);
+}
+
+.closeButton {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+  padding: 4px;
+  margin-left: auto;
+
+  z-index: 10;
+
+  background: var(--bg);
+
+  border-radius: 50%;
+}
+
+@keyframes backdropFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .backdrop {
+    padding: 16px;
+  }
+
+  .modal {
+    max-height: calc(100dvh - 32px);
+    border-radius: 24px;
+  }
+
+  .closeButton {
+    top: 12px;
+    left: calc(100% - 52px);
+  }
+}

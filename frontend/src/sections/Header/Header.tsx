@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BurgerButton from "../../components/UI/buttons/BurgerButton/BurgerButton";
+import BurgerButton from "../../components/UI/buttons/IconButton/IconButton";
 import cls from "./Header.module.css";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
