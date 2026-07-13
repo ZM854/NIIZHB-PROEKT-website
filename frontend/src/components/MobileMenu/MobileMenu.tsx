@@ -62,7 +62,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                   О нас
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   className={cls.menu__item}
                   href="#team"
@@ -73,7 +73,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 >
                   Сотрудники
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   className={cls.menu__item}

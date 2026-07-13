@@ -58,8 +58,11 @@
 }
 
 .meta {
-  color: var(--accent-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 
+  color: var(--accent-blue);
   font-weight: 500;
 
   margin-bottom: 28px;
@@ -77,11 +80,22 @@
 }
 
 .description {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
   color: var(--text);
 
-  white-space: pre-line;
-
   line-height: 1.7;
+
+  list-style: disc;
+  list-style-position: outside;
+
+  padding-left: 22px;
+}
+
+.description li::marker {
+  color: var(--accent-blue);
 }
 
 @keyframes shimmer {

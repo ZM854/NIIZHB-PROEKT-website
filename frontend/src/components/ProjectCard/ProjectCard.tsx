@@ -2,7 +2,8 @@ import cls from "./ProjectCard.module.css";
 
 type ProjectCardProps = {
   title: string;
-  meta: string;
+  location: string;
+  area: string;
   image: string;
   variant:
     | "small"
@@ -21,7 +22,8 @@ type ProjectCardProps = {
 
 const ProjectCard = ({
   title,
-  meta,
+  location,
+  area,
   image,
   variant,
   isActive,
@@ -59,14 +61,19 @@ const ProjectCard = ({
         <h3>{title}</h3>
 
         <div className={cls.details}>
-          <p>{meta}</p>
+          {(location || area) && (
+            <div className={cls.meta}>
+              {location && <p>{location}</p>}
+              {area && <p>{area}</p>}
+            </div>
+          )}
 
           <button
             type="button"
             className={cls.moreButton}
             onClick={handleMoreClick}
           >
-            Подробнее
+            <h4>Подробнее</h4>
           </button>
         </div>
       </div>

@@ -2,13 +2,12 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 import cls from "./IconButton.module.css";
 
 type IconButtonProps = {
-  onClick: () => void;
   children: ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-const IconButton = ({ onClick, children, ...props }: IconButtonProps) => {
+const IconButton = ({ children, ...props }: IconButtonProps) => {
   return (
-    <button className={cls.burger} onClick={onClick} {...props}>
+    <button className={cls.burger} {...props}>
       {children}
     </button>
   );

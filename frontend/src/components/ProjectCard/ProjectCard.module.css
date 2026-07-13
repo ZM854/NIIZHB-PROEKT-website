@@ -89,6 +89,10 @@
   transform: translateY(calc(100% - 120px));
 }
 
+.content h3 {
+  text-wrap: balance;
+}
+
 .card.active .content {
   transform: translateY(0);
 }
@@ -110,26 +114,24 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  text-wrap: balance;
 }
 
 .moreButton {
   align-self: flex-start;
+  opacity: 0;
 
-  padding-bottom: 2px;
-
+  padding: 6px;
+  border-radius: 4px;
   color: var(--text-on-accent);
 
   font-weight: 700;
 
-  border-bottom: 2px solid transparent;
+  border: 2px solid currentColor;
 
   transition:
     border-color 0.2s ease,
     opacity 0.2s ease;
-}
-
-.moreButton:hover {
-  border-color: currentColor;
 }
 
 .moreButton:focus-visible {
@@ -139,4 +141,9 @@
 
 .moreButton:active {
   opacity: 0.8;
+}
+
+.card.active .moreButton {
+  opacity: 1;
+  transition-delay: 0.1s;
 }

@@ -4,14 +4,16 @@ import cls from "./ProjectModalContent.module.css";
 
 type ProjectModalContentProps = {
   title: string;
-  meta: string;
-  description: string;
+  location: string;
+  area: string;
+  description: string[];
   image: string;
 };
 
 const ProjectModalContent = ({
   title,
-  meta,
+  location,
+  area,
   description,
   image,
 }: ProjectModalContentProps) => {
@@ -37,11 +39,20 @@ const ProjectModalContent = ({
       <div className={cls.info}>
         <h3>{title}</h3>
 
-        {meta && <p className={cls.meta}>{meta}</p>}
+        {(location || area) && (
+          <div className={cls.meta}>
+            {location && <p>{location}</p>}
+            {area && <p>{area}</p>}
+          </div>
+        )}
 
         <div className={cls.divider} />
 
-        <p className={cls.description}>{description}</p>
+        <ul className={cls.description}>
+          {description.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

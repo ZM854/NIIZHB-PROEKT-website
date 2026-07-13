@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import cls from "./HeroSection.module.css";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
-import TelegramIcon from "../../components/UI/icons/TelegramIcon/TelegramIcon";
 import BrandText from "../../components/BrandText/BrandText";
 import ThemeToggle from "../../components/UI/buttons/ThemeToggle/ThemeToggle";
 import DownArrowIcon from "../../components/UI/icons/DownArrowIcon/DownArrowIcon";
 import BurgerIcon from "../../components/UI/icons/BurgerMenuIcon/BurgerMenuIcon";
 import IconButton from "../../components/UI/buttons/IconButton/IconButton";
+import CallIcon from "../../components/UI/icons/CallIcon/CallIcon";
 
 const HeroSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +41,11 @@ const HeroSection = () => {
       </div>
 
       <div className={cls.hero__social}>
-        <TelegramIcon size={64} />
+        <a className={cls.contact__tel} href="tel:+7(926)955-87-81">
+          <IconButton>
+            <CallIcon size={64} />
+          </IconButton>
+        </a>
       </div>
 
       <div className={cls.down}>
