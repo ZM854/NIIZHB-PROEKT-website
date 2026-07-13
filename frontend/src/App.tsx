@@ -1,18 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { ThemeProvider } from "./context/ThemeProvider";
-import AboutSection from "./sections/AboutSection/AboutSection";
-import Footer from "./sections/Footer/Footer";
-import HeroSection from "./sections/HeroSection/HeroSection";
-import ProjectsSection from "./sections/ProjectsSection/ProjectsSection";
+import HomePage from "./pages/HomePage/HomePage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   return (
     <ThemeProvider>
-      <HeroSection />
-      <AboutSection />
-      {/* <TeamSection /> */}
-      <ProjectsSection />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contacts" element={<ContactPage />} />
+      </Routes>
     </ThemeProvider>
   );
 }

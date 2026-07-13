@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import ContactInfo from "../ContactInfo/ContactInfo";
 import cls from "./MobileMenu.module.css";
 import CloseIcon from "../UI/icons/CloseIcon/CloseIcon";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -9,6 +10,9 @@ type MobileMenuProps = {
 };
 
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -17,18 +21,21 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
     }
   }, [isOpen]);
 
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    id: string,
-  ): void => {
-    e.preventDefault();
-    const element = document.getElementById(id);
+  const navigateToSection = (id: string) => {
+    onClose();
 
-    if (!element) return;
+    if (location.pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      return;
+    }
 
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+    navigate("/", {
+      state: {
+        scrollTo: id,
+      },
     });
   };
 
@@ -40,7 +47,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       />
 
       <div className={`${cls.menu__overlay} ${isOpen ? cls.menu__open : ""}`}>
-        <div className={cls.menu__header}>          
+        <div className={cls.menu__header}>
           <button
             aria-label="Закрыть"
             onClick={onClose}
@@ -51,52 +58,25 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <nav className={cls.menu}>
             <ul className={cls.menu__list}>
               <li>
-                <a
+                <button
                   className={cls.menu__item}
-                  href="#about"
-                  onClick={(e) => {
-                    onClose();
-                    scrollToSection(e, "about");
-                  }}
+                  onClick={() => navigateToSection("about")}
                 >
                   О нас
-                </a>
+                </button>
               </li>
-              {/* <li>
-                <a
-                  className={cls.menu__item}
-                  href="#team"
-                  onClick={(e) => {
-                    onClose();
-                    scrollToSection(e, "team");
-                  }}
-                >
-                  Сотрудники
-                </a>
-              </li> */}
               <li>
-                <a
+                <button
                   className={cls.menu__item}
-                  href="#projects"
-                  onClick={(e) => {
-                    onClose();
-                    scrollToSection(e, "projects");
-                  }}
+                  onClick={() => navigateToSection("projects")}
                 >
                   Проекты
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  className={cls.menu__item}
-                  href="#contacts"
-                  onClick={(e) => {
-                    onClose();
-                    scrollToSection(e, "contacts");
-                  }}
-                >
+                <Link className={cls.menu__item} to="/contacts">
                   Контакты
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
