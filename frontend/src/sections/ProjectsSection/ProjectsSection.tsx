@@ -1,14 +1,14 @@
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import cls from "./ProjectsSection.module.css";
-import moscowSity from "../../assets/preview/img-moscow-sity.webp";
-import mnevniki from "../../assets/preview/img-mnevniki.webp";
-import zverevFactory from "../../assets/preview/img-zverev-factory.webp";
-import fok from "../../assets/preview/img-fok.webp";
-import lipezkResidental from "../../assets/preview/img-lipezk-residental.webp";
-import embaevskoe from "../../assets/preview/img-embaevskoe.webp";
-import residentalComplex from "../../assets/preview/img-residental-complex.webp";
-import twoCapitans from "../../assets/preview/img-two-capitans.webp";
-import pharm from "../../assets/preview/img-pharmaceutical-production.webp";
+import moscowSity from "../../assets/projects/preview/img-moscow-sity.webp";
+import mnevniki from "../../assets/projects/preview/img-mnevniki.webp";
+import zverevFactory from "../../assets/projects/preview/img-zverev-factory.webp";
+import fok from "../../assets/projects/preview/img-fok.webp";
+import lipezkResidental from "../../assets/projects/preview/img-lipezk-residental.webp";
+import embaevskoe from "../../assets/projects/preview/img-embaevskoe.webp";
+import residentalComplex from "../../assets/projects/preview/img-residental-complex.webp";
+import twoCapitans from "../../assets/projects/preview/img-two-capitans.webp";
+import pharm from "../../assets/projects/preview/img-pharmaceutical-production.webp";
 import { useState } from "react";
 import Modal from "../../components/Modal/Modal";
 import ProjectModalContent from "../../components/ProjectModalContent/ProjectModalContent";
@@ -40,7 +40,8 @@ const ProjectsSection = () => {
       location: "г. Москва",
       area: "Площадь здания 190 000 кв. м.",
       img: moscowSity,
-      loadFullImage: () => import("../../assets/img-moscow-sity.webp"),
+      loadFullImage: () =>
+        import("../../assets/projects/full/img-moscow-sity.webp"),
       variant: "tall",
     },
     {
@@ -53,7 +54,8 @@ const ProjectsSection = () => {
       location: "г. Москва",
       area: "",
       img: mnevniki,
-      loadFullImage: () => import("../../assets/img-moscow-sity.webp"),
+      loadFullImage: () =>
+        import("../../assets/projects/full/img-mnevniki.webp"),
       variant: "wide",
     },
     {
@@ -67,7 +69,8 @@ const ProjectsSection = () => {
       location: "г. Красногорск",
       area: "Общая площадь цехов с АБК 250 000 кв. м.",
       img: zverevFactory,
-      loadFullImage: () => import("../../assets/img-moscow-sity.webp"),
+      loadFullImage: () =>
+        import("../../assets/projects/full/img-zverev-factory.webp"),
       variant: "small",
     },
     {
@@ -81,7 +84,7 @@ const ProjectsSection = () => {
       location: "г. Москва",
       area: "Площадь здания 11 600 кв. м.",
       img: fok,
-      loadFullImage: () => import("../../assets/img-moscow-sity.webp"),
+      loadFullImage: () => import("../../assets/projects/full/img-fok.webp"),
       variant: "wide",
     },
     {
@@ -95,7 +98,8 @@ const ProjectsSection = () => {
       location: "г. Липецк",
       area: "Общая площадь 150 000 кв. м.",
       img: lipezkResidental,
-      loadFullImage: () => import("../../assets/img-moscow-sity.webp"),
+      loadFullImage: () =>
+        import("../../assets/projects/full/img-lipezk-residental.webp"),
       variant: "small",
     },
     {
@@ -109,7 +113,8 @@ const ProjectsSection = () => {
       location: "г. Красногорск",
       area: "Общая площадь 130 000 кв. м.",
       img: twoCapitans,
-      loadFullImage: () => import("../../assets/img-moscow-sity.webp"),
+      loadFullImage: () =>
+        import("../../assets/projects/full/img-two-capitans.webp"),
       variant: "small",
     },
     {
@@ -122,7 +127,8 @@ const ProjectsSection = () => {
       location: "г. Тюмень",
       area: "Общая площадь 1 000 000 кв. м.",
       img: embaevskoe,
-      loadFullImage: () => import("../../assets/img-moscow-sity.webp"),
+      loadFullImage: () =>
+        import("../../assets/projects/full/img-embaevskoe.webp"),
       variant: "tall",
     },
     {
@@ -136,7 +142,8 @@ const ProjectsSection = () => {
       location: "г. Москва",
       area: "Общая площадь 41 000 кв. м.",
       img: residentalComplex,
-      loadFullImage: () => import("../../assets/img-moscow-sity.webp"),
+      loadFullImage: () =>
+        import("../../assets/projects/full/img-residental-complex.webp"),
       variant: "wide",
     },
     {
@@ -150,7 +157,8 @@ const ProjectsSection = () => {
       location: "г. Щёлково",
       area: "Общая площадь 2 900 кв. м.",
       img: pharm,
-      loadFullImage: () => import("../../assets/img-moscow-sity.webp"),
+      loadFullImage: () =>
+        import("../../assets/projects/full/img-pharmaceutical-production.webp"),
       variant: "wideTabletSmall",
     },
   ];
