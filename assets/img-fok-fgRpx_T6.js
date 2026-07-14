@@ -1,0 +1,1 @@
+var e=`/NIIZHB-PROEKT-website/assets/img-fok-Q_dxoFN1.webp`;export{e as default};

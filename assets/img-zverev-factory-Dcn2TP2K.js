@@ -1,0 +1,1 @@
+var e=`/NIIZHB-PROEKT-website/assets/img-zverev-factory-CRw0NMiF.webp`;export{e as default};

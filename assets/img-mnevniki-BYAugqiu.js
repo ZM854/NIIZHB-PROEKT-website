@@ -1,0 +1,1 @@
+var e=`/NIIZHB-PROEKT-website/assets/img-mnevniki-C-sE6eE-.webp`;export{e as default};

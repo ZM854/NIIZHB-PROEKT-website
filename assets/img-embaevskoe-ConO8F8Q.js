@@ -1,0 +1,1 @@
+var e=`/NIIZHB-PROEKT-website/assets/img-embaevskoe-D3jmlt5w.webp`;export{e as default};

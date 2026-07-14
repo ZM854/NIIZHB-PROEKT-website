@@ -1,0 +1,1 @@
+var e=`/NIIZHB-PROEKT-website/assets/img-lipezk-residental-DjIuQEJC.webp`;export{e as default};

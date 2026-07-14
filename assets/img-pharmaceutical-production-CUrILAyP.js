@@ -1,0 +1,1 @@
+var e=`/NIIZHB-PROEKT-website/assets/img-pharmaceutical-production-BpNkw9UA.webp`;export{e as default};

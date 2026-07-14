@@ -1,0 +1,1 @@
+var e=`/NIIZHB-PROEKT-website/assets/img-two-capitans-cFG2uW8L.webp`;export{e as default};

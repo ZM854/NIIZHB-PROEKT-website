@@ -1,0 +1,1 @@
+var e=`/NIIZHB-PROEKT-website/assets/img-moscow-sity-D4etT927.webp`;export{e as default};
