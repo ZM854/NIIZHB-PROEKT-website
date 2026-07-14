@@ -51,13 +51,6 @@
   font-size: 14px;
   color: var(--text-secondary);
 }
-.hero__credit {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  font-size: 14px;
-  color: var(--text-secondary);
-}
 
 .hero__credit p {
   display: flex;

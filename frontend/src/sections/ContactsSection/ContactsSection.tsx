@@ -1,7 +1,4 @@
 import { useState } from "react";
-import IconButton from "../../components/UI/buttons/IconButton/IconButton";
-import ThemeToggle from "../../components/UI/buttons/ThemeToggle/ThemeToggle";
-import BurgerIcon from "../../components/UI/icons/BurgerMenuIcon/BurgerMenuIcon";
 import cls from "./ContactsSection.module.css";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
@@ -10,13 +7,6 @@ const ContactsSection = () => {
 
   return (
     <section className={cls.contactsSection} id="about">
-      <div className={cls.controls}>
-        <ThemeToggle />
-        <IconButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <BurgerIcon size={64} />
-        </IconButton>
-      </div>
-
       <div className={cls.content}>
         <h2 className={cls.title}>Контакты</h2>
 
@@ -39,6 +29,13 @@ const ContactsSection = () => {
             <span>Телефон:</span>
             <a className={cls.tel} href="tel:+79269558781">
               +7 (926) 955-87-81
+            </a>
+          </p>
+
+          <p className={cls.contactItem}>
+            <span>Telegram:</span>
+            <a className={cls.email} href="https://t.me/Vasiliy_Kniazev">
+              https://t.me/Vasiliy_Kniazev
             </a>
           </p>
 

@@ -6,7 +6,7 @@ import ThemeToggle from "../../components/UI/buttons/ThemeToggle/ThemeToggle";
 import DownArrowIcon from "../../components/UI/icons/DownArrowIcon/DownArrowIcon";
 import BurgerIcon from "../../components/UI/icons/BurgerMenuIcon/BurgerMenuIcon";
 import IconButton from "../../components/UI/buttons/IconButton/IconButton";
-import CallIcon from "../../components/UI/icons/CallIcon/CallIcon";
+import TelegramIcon from "../../components/UI/icons/TelegramIcon/TelegramIcon";
 
 const HeroSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,9 +41,13 @@ const HeroSection = () => {
       </div>
 
       <div className={cls.hero__social}>
-        <a className={cls.contact__tel} href="tel:+7(926)955-87-81">
+        <a
+          href="https://t.me/Vasiliy_Kniazev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <IconButton>
-            <CallIcon size={64} />
+            <TelegramIcon size={64} />
           </IconButton>
         </a>
       </div>
