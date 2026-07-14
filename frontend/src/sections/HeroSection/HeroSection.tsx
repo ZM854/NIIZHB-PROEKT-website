@@ -61,7 +61,10 @@ const HeroSection = () => {
       </div>
 
       <div className={cls.hero__credit}>
-        <p>© 2022 ООО «НИИЖБ ПРОЕКТ»</p>
+        <p>
+          <span>© 2022 ООО</span>
+          <span>«НИИЖБ ПРОЕКТ»</span>
+        </p>
       </div>
 
       <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />

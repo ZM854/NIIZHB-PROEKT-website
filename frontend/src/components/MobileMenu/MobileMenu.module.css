@@ -59,6 +59,7 @@
   display: inline-block;
   width: 224px;
   font-weight: 500;
+  text-align: left;
 }
 
 .backdrop {

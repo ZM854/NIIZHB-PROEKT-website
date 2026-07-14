@@ -74,7 +74,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 </button>
               </li>
               <li>
-                <Link className={cls.menu__item} to="/contacts">
+                <Link
+                  onClick={onClose}
+                  className={cls.menu__item}
+                  to="/contacts"
+                >
                   Контакты
                 </Link>
               </li>

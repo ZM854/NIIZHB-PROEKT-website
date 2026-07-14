@@ -1,11 +1,9 @@
-import HeroSection from "../../sections/HeroSection/HeroSection";
-import MapSection from "../../sections/MapSection/MapSection";
+import ContactsSection from "../../sections/ContactsSection/ContactsSection";
 
 const ContactPage = () => {
   return (
     <>
-      <HeroSection />
-      <MapSection />
+      <ContactsSection />
     </>
   );
 };
