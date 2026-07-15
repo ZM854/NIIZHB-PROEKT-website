@@ -8,7 +8,7 @@ const ContactsSection = () => {
   return (
     <section className={cls.contactsSection} id="about">
       <div className={cls.content}>
-        <h2 className={cls.title}>Контакты</h2>
+        <h3 className={cls.title}>Контакты</h3>
 
         <div className={cls.contacts}>
           <p className={cls.contactItem}>

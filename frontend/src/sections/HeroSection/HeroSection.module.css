@@ -23,7 +23,7 @@
 
 .hero__controls {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   position: absolute;
   top: 16px;
   right: 16px;

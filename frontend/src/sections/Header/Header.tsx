@@ -60,14 +60,14 @@ const Header = () => {
             </Link>
           </nav>
 
-          <ThemeToggle className={cls.themeToggle} />
+          <ThemeToggle iconSize={40} className={cls.themeToggle} />
 
           <IconButton
             className={cls.burger}
             aria-label="Открыть меню"
             onClick={() => setMenuOpen(true)}
           >
-            <BurgerIcon size={64} />
+            <BurgerIcon size={48} />
           </IconButton>
         </div>
       </header>

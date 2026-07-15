@@ -34,9 +34,9 @@ const HeroSection = () => {
       </h1>
 
       <div className={cls.hero__controls}>
-        <ThemeToggle />
+        <ThemeToggle iconSize={40} />
         <IconButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <BurgerIcon size={64} />
+          <BurgerIcon size={48} />
         </IconButton>
       </div>
 

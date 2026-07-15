@@ -53,7 +53,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             onClick={onClose}
             className={cls.menu__close}
           >
-            <CloseIcon />
+            <CloseIcon size={48} />
           </button>
           <nav className={cls.menu}>
             <ul className={cls.menu__list}>

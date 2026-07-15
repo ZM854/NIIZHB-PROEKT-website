@@ -38,11 +38,11 @@
 
   --base-font-size: 18px;
 
-  --fs-h1: 4rem;
-  --fs-h2: 2.6rem;
-  --fs-h3: 1.5rem;
-  --fs-body: 1.125rem;
-  --fs-nav: 1.125rem;
+  --fs-h1: 3rem;
+  --fs-h2: 2.2rem;
+  --fs-h3: 1.3rem;
+  --fs-body: 1rem;
+  --fs-nav: 1rem;
 
   --arial: Arial, Helvetica, sans-serif;
   --roboto: "Roboto", Helvetica, sans-serif;
