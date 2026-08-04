@@ -6,8 +6,8 @@ const ContactInfo = () => {
       <a className={cls.contact__tel} href="tel:+7(926)955-87-81">
         +7(926)955-87-81
       </a>
-      <a className={cls.contact__email} href="mailto:2021sk@mail.ru">
-        2021sk@mail.ru
+      <a className={cls.contact__email} href="mailto:info@niijbproject.ru">
+        info@niijbproject.ru
       </a>
     </div>
   );

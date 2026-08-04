@@ -12,16 +12,9 @@ const ContactsSection = () => {
 
         <div className={cls.contacts}>
           <p className={cls.contactItem}>
-            <span>E-mail (для рассылок и предложений о сотрудничестве):</span>
-            <a className={cls.email} href="mailto:2021sk@mail.ru">
-              2021sk@mail.ru
-            </a>
-          </p>
-
-          <p className={cls.contactItem}>
-            <span>E-mail (по вопросам проектируемых объектов):</span>
-            <a className={cls.email} href="mailto:2021sk@mail.ru">
-              2021sk@mail.ru
+            <span>E-mail:</span>
+            <a className={cls.email} href="mailto:info@niijbproject.ru">
+              info@niijbproject.ru
             </a>
           </p>
 
